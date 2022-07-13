@@ -1,13 +1,23 @@
 ﻿@model List<WebTraningDemoApp.Models.StudentModel>
 
 
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Studing Level</th>
+        </tr>
 
-    @foreach(StudentModel student in Model)
-    {
-        <p>Name @student.Name</p>
-        <p>Email @student.Email</p>
-        <p>Studing Level @student.Level</p>
-        //<p>student.N</p>
+             @foreach(StudentModel student in Model)
+             {
+                 <tr>
+                     <td>@student.Name</td>
+                     <td>@student.Email</td>
+                     <td>@student.Level</td>
+               </tr>
+             }
+
+    </table>
 
 
-    }
+  
