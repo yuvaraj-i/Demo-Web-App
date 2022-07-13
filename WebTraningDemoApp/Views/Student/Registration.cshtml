@@ -1,0 +1,36 @@
+﻿@model WebTraningDemoApp.Models.StudentModel
+
+
+<h1>Sign up</h1>
+
+@{
+
+
+}
+
+@using(Html.BeginForm(FormMethod.Post))
+{
+    @Html.Label("First name")
+    @Html.TextBoxFor(name => Model.FirstName) <br />
+    @Html.Label("Last name")
+    @Html.TextBoxFor(name => Model.LastName) <br />
+    @Html.Label("Date of birth").Equals("") 
+    @Html.TextBoxFor(dob => Model.DateOfBirth) <br />
+    @Html.Label("Email address")
+    @Html.TextBoxFor(email => Model.Email) <br />
+    @Html.Label("School name")
+    @Html.TextBoxFor(school => Model.Organization) <br />
+
+    @*@Html.Password("Password")*@
+
+    <input type="submit" value="Sign up"/>
+}
+
+@*<form>
+    <label asp-for="FirstName">Name</label>
+    <input asp-for="FirstName"/>
+</form>*@
+
+
+
+

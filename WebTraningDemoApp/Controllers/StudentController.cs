@@ -9,7 +9,7 @@ namespace WebTraningDemoApp.Controllers
         {
             return View();
         }
-        
+
         public IActionResult List()
         {
             return View(GetStudentsDetails());
@@ -19,18 +19,31 @@ namespace WebTraningDemoApp.Controllers
         {
             List<StudentModel> students = new List<StudentModel>();
 
-            var student1 = new StudentModel() { Name = "Yuvaraj", Id = 1, Email = "yuvaraj@gmail.com", Level = "studing" };
-            var student2 = new StudentModel() { Name = "Raj", Id = 2, Email = "raj@gmail.com", Level = "Graduate" };
-            StudentModel student3 = new StudentModel() { Name = "Ram", Id = 3, Email = "ram@gmail.com", Level = "studing" };
+            var student1 = new StudentModel() { FirstName = "Yuvaraj", Id = 1, Email = "yuvaraj@gmail.com" };
+            var student2 = new StudentModel() { FirstName = "Raj", Id = 2, Email = "raj@gmail.com" };
+            StudentModel student3 = new() { FirstName = "Ram", Id = 3, Email = "ram@gmail.com" };
 
             students.Add(student1);
             students.Add(student2);
-            //students.Add(student1);
             students.Add(student3);
 
             return students;
 
         }
+
+        public IActionResult Registration(StudentModel student)
+        {
+            if(ModelState.IsValid) {
+                return Redirect("/student/list");
+            }
+
+            Console.WriteLine(student.Id);
+
+            return View();
+        }
+
+
+
 
     }
 }
