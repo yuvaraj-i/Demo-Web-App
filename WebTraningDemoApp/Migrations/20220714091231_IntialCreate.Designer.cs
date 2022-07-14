@@ -10,7 +10,7 @@ using WebTraningDemoApp.Models;
 
 namespace WebTraningDemoApp.Migrations
 {
-    [DbContext(typeof(StudentModelContext))]
+    [DbContext(typeof(StudentDBContext))]
     [Migration("20220714091231_IntialCreate")]
     partial class IntialCreate
     {

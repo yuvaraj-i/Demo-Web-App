@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebTraningDemoApp.Models;
 
@@ -10,9 +11,10 @@ using WebTraningDemoApp.Models;
 namespace WebTraningDemoApp.Migrations
 {
     [DbContext(typeof(StudentDBContext))]
-    partial class StudentModelContextModelSnapshot : ModelSnapshot
+    [Migration("20220714104851_secondCreation")]
+    partial class secondCreation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

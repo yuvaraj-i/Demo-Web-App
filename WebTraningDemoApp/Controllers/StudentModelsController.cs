@@ -11,9 +11,9 @@ namespace WebTraningDemoApp.Controllers
 {
     public class StudentModelsController : Controller
     {
-        private readonly StudentModelContext _context;
+        private readonly StudentDBContext _context;
 
-        public StudentModelsController(StudentModelContext context)
+        public StudentModelsController(StudentDBContext context)
         {
             _context = context;
         }
