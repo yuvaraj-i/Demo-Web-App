@@ -33,17 +33,16 @@ namespace WebTraningDemoApp.Controllers
 
         public IActionResult Registration(StudentModel student)
         {
-            if(ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {
                 return Redirect("/student/list");
+
+
             }
-
-            Console.WriteLine(student.Id);
-
+            //Console.WriteLine(student.Id);
+            ModelState.Clear();
             return View();
         }
-
-
-
 
     }
 }

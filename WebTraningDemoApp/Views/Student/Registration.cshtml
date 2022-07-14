@@ -10,12 +10,16 @@
 
 @using(Html.BeginForm(FormMethod.Post))
 {
-    @Html.Label("First name")
+    <label asp-for="FirstName">First Name</label>
+    
+
+    @*@Html.Label("First name", "First Name")*@
     @Html.TextBoxFor(name => Model.FirstName) <br />
     @Html.Label("Last name")
     @Html.TextBoxFor(name => Model.LastName) <br />
-    @Html.Label("Date of birth").Equals("") 
-    @Html.TextBoxFor(dob => Model.DateOfBirth) <br />
+    @Html.Label("Date of birth")
+    <input type="date" asp-for="DateOfBirth" required/> <br />
+    @*@Html.TextBoxFor(dob => Model.DateOfBirth) *@
     @Html.Label("Email address")
     @Html.TextBoxFor(email => Model.Email) <br />
     @Html.Label("School name")
