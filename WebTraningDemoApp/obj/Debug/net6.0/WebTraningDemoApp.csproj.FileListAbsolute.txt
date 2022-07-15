@@ -244,3 +244,5 @@ D:\dot Net\asp\WebTraningDemoApp\WebTraningDemoApp\bin\Debug\net6.0\runtimes\uni
 D:\dot Net\asp\WebTraningDemoApp\WebTraningDemoApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\dot Net\asp\WebTraningDemoApp\WebTraningDemoApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\dot Net\asp\WebTraningDemoApp\WebTraningDemoApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\dot Net\asp\WebTraningDemoApp\WebTraningDemoApp\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\dot Net\asp\WebTraningDemoApp\WebTraningDemoApp\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebTraningDemoApp.Models;
 
@@ -21,9 +16,9 @@ namespace WebTraningDemoApp.Controllers
         // GET: StudentModels
         public async Task<IActionResult> Index()
         {
-              return _context.Students != null ? 
-                          View(await _context.Students.ToListAsync()) :
-                          Problem("Entity set 'StudentModelContext.Students'  is null.");
+            return _context.Students != null ?
+                        View(await _context.Students.ToListAsync()) :
+                        Problem("Entity set 'StudentDBContext.Students'  is null.");
         }
 
         // GET: StudentModels/Details/5
@@ -142,21 +137,21 @@ namespace WebTraningDemoApp.Controllers
         {
             if (_context.Students == null)
             {
-                return Problem("Entity set 'StudentModelContext.Students'  is null.");
+                return Problem("Entity set 'StudentDBContext.Students'  is null.");
             }
             var studentModel = await _context.Students.FindAsync(id);
             if (studentModel != null)
             {
                 _context.Students.Remove(studentModel);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool StudentModelExists(int id)
         {
-          return (_context.Students?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Students?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

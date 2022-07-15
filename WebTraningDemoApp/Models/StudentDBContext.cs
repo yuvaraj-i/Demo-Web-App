@@ -6,7 +6,7 @@ namespace WebTraningDemoApp.Models
     {
 
 
-        public StudentDBContext(DbContextOptions<StudentDBContext> options) : base(options){ }
+        public StudentDBContext(DbContextOptions<StudentDBContext> options) : base(options) { }
 
         public DbSet<StudentModel> Students { get; set; }
     }

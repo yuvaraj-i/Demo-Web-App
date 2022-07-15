@@ -10,13 +10,13 @@ using WebTraningDemoApp.Models;
 namespace WebTraningDemoApp.Migrations
 {
     [DbContext(typeof(StudentDBContext))]
-    partial class StudentModelContextModelSnapshot : ModelSnapshot
+    partial class StudentDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.7")
+                .HasAnnotation("ProductVersion", "6.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("WebTraningDemoApp.Models.StudentModel", b =>
